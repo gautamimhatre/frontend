@@ -1,0 +1,46 @@
+<div class="topnav">
+  <a class="active-1" >SCANGO</a>
+  
+  <button mat-button (click)='goToHome()'><a class="active">Home</a></button>
+  <button mat-button (click)='goToCart(dataArray.basket_id)'><a class="active">My Cart</a></button>
+  <button mat-button><a class="active">Contact</a></button>
+  <!-- <a href="#news">News</a> -->
+  <!-- <a href="#contact">Contact</a> -->
+  <!-- <a href="#about">About</a> -->
+</div>
+
+<div class="center-1">
+    <b><h1>My Cart</h1></b>
+    <div *ngFor="let i of dataArray.data">
+<mat-card class="example-card">
+    <mat-card-title-group>
+      <mat-card-title>{{i.product_name}}</mat-card-title>
+      <mat-card-subtitle>Quantity : {{i.quantity}}</mat-card-subtitle>
+      <mat-card-content>{{i.total_item_price}}/-</mat-card-content>
+
+      <div>
+      <button mat-icon-button color="warn" (click)="increaseQ(i, dataArray.basket_id)">
+        <mat-icon>arrow_drop_up</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" (click)="decreaseQ(i, dataArray.basket_id)">
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+    </div>
+    <div>
+    <button mat-icon-button color="warn" (click)="deleteitem(i, dataArray.basket_id)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+    </mat-card-title-group>
+  </mat-card>
+</div>
+  <div class="example-button-row">
+    <button mat-raised-button>Pay {{dataArray.total_basket_price}}/-</button>
+  </div>
+  <div class="example-button-row">
+    <button mat-raised-button (click)="open(dataArray.basket_id)"> UPI {{dataArray.total_basket_price}}/-</button>
+  </div>
+  <div class="example-button-row">
+    <button mat-raised-button (click)="open(dataArray.basket_id)"> Debit Card {{dataArray.total_basket_price}}/-</button>
+  </div>
+</div>

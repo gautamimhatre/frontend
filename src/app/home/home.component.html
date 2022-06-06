@@ -1,0 +1,27 @@
+<div class="topnav">
+  <a class="active-1" >SCANGO</a>
+  
+  <button mat-button (click)='goToHome()'><a class="active">Home</a></button>
+  <button mat-button (click)='goToCart(dataArray.basket_id)'><a class="active">My Cart</a></button>
+  <button mat-button><a class="active">Contact</a></button>
+  <button mat-button><a class="active"(click)='goToLogin()'>Logout</a></button>
+  <!-- <a href="#news">News</a> -->
+  <!-- <a href="#contact">Contact</a> -->
+  <!-- <a href="#about">About</a> -->
+</div>
+
+<div style="padding-left:650px">
+  <h2>WELCOME TO SCANGO</h2>
+  <p></p>
+</div>
+
+
+
+<div style="padding-left:660px">
+<button  mat-raised-button color="primary" (click)='goToScanner()'>Start Scanning Products!</button>
+</div>
+
+<br>
+<div>
+  <img class="image" src="assets\images\shopping.jpg" >
+</div>

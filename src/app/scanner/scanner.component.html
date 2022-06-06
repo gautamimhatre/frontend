@@ -1,0 +1,23 @@
+<div class="topnav">
+    <a class="active-1" >SCANGO</a>
+    
+    <button mat-button (click)='goToHome()'><a class="active">Home</a></button>
+    <button mat-button (click)='goToCart(dataArray.basket_id)'><a class="active">My Cart</a></button>
+    <button mat-button><a class="active">Contact</a></button>
+    <!-- <a href="#news">News</a> -->
+    <!-- <a href="#contact">Contact</a> -->
+    <!-- <a href="#about">About</a> -->
+  </div>
+<!-- <div>
+
+    <button mat-raised-button color="primary" (click)='goToCart(dataArray.basket_id)'>My Cart</button>
+</div> -->
+<div class="square">
+<zxing-scanner #scanner (scanSuccess)="onResult($event)"></zxing-scanner>
+</div>
+<div *ngIf="scanResult">
+<div *ngIf="scannedStatus.status" >Item available
+    <button mat-raised-button color="primary" (click)='addItem()'>Add Item To Basket</button>
+</div>
+<div *ngIf="!scannedStatus.status">Item not available</div>
+</div>

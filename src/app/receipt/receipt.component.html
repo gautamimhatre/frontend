@@ -1,0 +1,71 @@
+<div class="topnav">
+	<a class="active-1" >SCANGO</a>
+	
+	<button mat-button (click)='goToHome()'><a class="active">Home</a></button>
+	<button mat-button (click)='goToCart(dataArray.basket_id)'><a class="active">My Cart</a></button>
+	<button mat-button><a class="active">Contact</a></button>
+	<!-- <a href="#news">News</a> -->
+	<!-- <a href="#contact">Contact</a> -->
+	<!-- <a href="#about">About</a> -->
+  </div>
+
+<div class="center-2">
+      <div id="invoice-POS">
+    
+    
+    
+    <div id="mid">
+        <div class="center-1">
+        <h2>Receipt</h2></div>
+      <div class="info">
+        
+        <!-- <p>  -->
+            <div class="info-text">Address : street city, state 0000</div>
+           <div class="info-text"> Email   : shop@gmail.com</div>
+            <div class="info-text">Phone   : 555-555-5555</div>
+        <!-- </p> -->
+      </div>
+    </div><!--End Invoice Mid-->
+    
+    <div id="bot">
+
+					<div id="table">
+						<table>
+							<tr class="tabletitle">
+								<td class="item"><h2>Item</h2></td>
+								<td class="Hours"><h2>Qty</h2></td>
+								<td class="Rate"><h2>Sub Total</h2></td>
+							</tr>
+							<!-- <div *ngFor="let i of dataArray.data"> -->
+
+							<tr class="service" *ngFor="let i of dataArray.data">
+								<td class="tableitem"><p class="itemtext">{{i.product_name}}</p></td>
+								<td class="tableitem"><p class="itemtext">{{i.quantity}}</p></td>
+								<td class="tableitem"><p class="itemtext">₹{{i.total_item_price}}</p></td>
+							</tr>
+						<!-- </div> -->
+
+							<!-- <tr class="tabletitle">
+								<td></td>
+								<td class="Rate"><h2>tax</h2></td>
+								<td class="payment"><h2>$419.25</h2></td>
+							</tr> -->
+
+							<tr class="tabletitle">
+								<td></td>
+								<td class="Rate"><h2>Total</h2></td>
+								<td class="payment"><h2>₹{{dataArray.total_basket_price}}</h2></td>
+							</tr>
+
+						</table>
+					</div><!--End Table-->
+
+					<div id="legalcopy">
+						<p class="legal"><strong>Thank You For Shopping With Us!</strong>  </p>
+						<p class="legal"><strong>Visit Again!!</strong>  </p>
+					</div>
+
+				</div><!--End InvoiceBot-->
+  </div><!--End Invoice-->
+</div>
+

@@ -1,0 +1,54 @@
+
+
+<div class="center-2">
+  <!-- <div class="center-3">
+      <h1>ScanGo</h1>
+  </div> -->
+  <div class="center-3">
+  <h1><strong><span style="font-family: 'Product Sans',sans-serif;font-size:50px;"><span class="g-blue">S</span><span
+      class="o-red">c</span><span class="o-yellow">a</span><span class="g-blue">n</span><span
+      class="l-green">G</span><span class="o-red e-red">o</span></span></strong></h1>
+  </div>
+<div class="center-1">
+<form class="example-form" [formGroup]="registrationForm" (ngSubmit)="registration()">
+    <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Email</mat-label>
+    <input type="text" matInput formControlName="emailFormControl" placeholder="Ex. pat@example.com">
+    <!-- <mat-error *ngIf="!emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error> -->
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="passwordFormControl" >
+      <!-- <mat-error *ngIf="!emailFormControl.hasError('required')">
+        Please enter a valid password 
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Passowrd is <strong>required</strong>
+      </mat-error> -->
+    </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Username</mat-label>
+      <input type="text" matInput formControlName="usernameFormControl" >
+      <!-- <mat-error *ngIf="!emailFormControl.hasError('required')">
+        Please enter a valid username 
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Username is <strong>required</strong>
+      </mat-error> -->
+    </mat-form-field>
+      
+<div class="example-button-row">
+  <button mat-button color="primary" type="submit">Register</button>
+</div>
+</form>
+
+</div>
+</div>
+
+
